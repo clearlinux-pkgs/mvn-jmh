@@ -4,15 +4,18 @@
 #
 Name     : mvn-jmh
 Version  : 1
-Release  : 1
+Release  : 2
 URL      : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar
 Source0  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar
-Source1  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar
-Source2  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.pom
-Source3  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21-sources.jar
-Source4  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.jar
-Source5  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.pom
-Source6  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-parent/1.21/jmh-parent-1.21.pom
+Source1  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-core/1.19/jmh-core-1.19.jar
+Source2  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-core/1.19/jmh-core-1.19.pom
+Source3  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar
+Source4  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.pom
+Source5  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21-sources.jar
+Source6  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.jar
+Source7  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.pom
+Source8  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-parent/1.19/jmh-parent-1.19.pom
+Source9  : https://repo.maven.apache.org/maven2/org/openjdk/jmh/jmh-parent/1.21/jmh-parent-1.21.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
@@ -38,23 +41,32 @@ data components for the mvn-jmh package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.19
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.19/jmh-core-1.19.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.19
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.19/jmh-core-1.19.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.pom
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21-sources.jar
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21-sources.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.jar
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.pom
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-parent/1.19
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-parent/1.19/jmh-parent-1.19.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-parent/1.21
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-parent/1.21/jmh-parent-1.21.pom
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-parent/1.21/jmh-parent-1.21.pom
 
 
 %files
@@ -62,10 +74,13 @@ cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-par
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.19/jmh-core-1.19.jar
+/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.19/jmh-core-1.19.pom
 /usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar
 /usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar
 /usr/share/java/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.pom
 /usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21-sources.jar
 /usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.jar
 /usr/share/java/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.pom
+/usr/share/java/.m2/repository/org/openjdk/jmh/jmh-parent/1.19/jmh-parent-1.19.pom
 /usr/share/java/.m2/repository/org/openjdk/jmh/jmh-parent/1.21/jmh-parent-1.21.pom
